@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Count</title>
+</head>
+<body>
+<a href="{% url 'home' %}">Start agane</a>
+<br/>
+<a href="{% url 'about' %}">About</a>
+<h1>Your text has {{ words }} words</h1>
+<h2>Your text:</h2>
+{{ fulltext }}
+<h2>Word count</h2>
+{% for word, count in worddif %}
+    {{ word }}-{{ count }}
+    <br/>
+{% endfor %}
+</body>
+</html>
